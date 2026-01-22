@@ -1,1 +1,17 @@
-node_modules
+# Dependencias
+node_modules/
+
+# Variables de entorno (¡MUY IMPORTANTE!)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Carpetas de compilación
+build/
+dist/
+
+# Logs y archivos de sistema
+npm-debug.log*
+.DS_Store
