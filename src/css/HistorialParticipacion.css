@@ -1,0 +1,93 @@
+/* FONDO GENERAL CON TU GRADIENTE */
+.dashboard-wrapper {
+    width: 100%;
+    height: 98vh;
+    margin: 0 auto;
+    padding: 2rem;
+    background: linear-gradient(135deg, #ffc300, #ff5733, #c70039, #900c3e, #571845);
+   
+}
+
+/* TÍTULO */
+.titulo-dashboard {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: #900c3e;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* GRID MÉTRICAS */
+.metricas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 1.5rem;
+}
+
+/* MÉTRICA SUPER COMPACTA */
+.metric-card {
+    background: white;
+    padding: 0.7rem 1rem;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 195, 0, 0.5);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease;
+}
+
+.metric-card:hover {
+    transform: translateY(-3px);
+}
+
+.metric-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 0.3rem;
+}
+
+.metric-icon {
+    font-size: 1.1rem;
+}
+
+.metric-title {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #444;
+}
+
+.metric-value {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #900c3e;
+}
+
+/* GRID DE GRÁFICOS */
+.graficos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* TARJETA DE GRÁFICO */
+.chart-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 195, 0, 0.5);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+    height: 320px;
+}
+
+.chart-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #900c3e;
+    margin-bottom: 0.5rem;
+}
+
+.chart-content {
+    height: 240px;
+}

@@ -1,0 +1,109 @@
+/* src/css/Header.css */
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: rgba(34, 34, 34, 0.25);
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.header-logo-container {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.header-logo {
+  height: 60px;
+  margin-right: 10px;
+}
+
+.header-company-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.header-right-section {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.header-nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.header-nav-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.header-nav-list a,
+.header-submenu-toggle {
+  color: white;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 8px 12px;
+}
+
+.header-submenu-toggle {
+  font-family: inherit;
+  cursor: pointer;
+  position: relative;
+  z-index: 1002;
+}
+
+.header-submenu-container {
+  position: relative;
+}
+
+.header-submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  margin: 5px 0 0 0;
+  padding: 5px 0;
+  border-radius: 6px;
+  min-width: 160px;
+  z-index: 9999; /* ¡Clave para que aparezca sobre todo! */
+  background-color: rgba(34, 34, 34, 0.95);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.header-submenu li {
+  padding: 8px 16px;
+  margin: 0;
+}
+
+.header-submenu li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+}
+
+.header-submenu li:hover {
+  background-color: #555;
+}

@@ -1,0 +1,21 @@
+.btn-log{
+    background-color: transparent;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    border: 2px solid #ffff;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    margin-bottom: 0;
+}
+
+.btn-log:hover {
+    background-color: #ffa007;
+    color: black;
+    border-color: #ffa007;
+}

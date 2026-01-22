@@ -1,0 +1,226 @@
+/* --- Paleta de colores definida para reutilización --- */
+:root {
+  --primary-yellow: #ffc300;
+  --primary-orange: #ff5733;
+  --accent-red: #c70039;
+  --dark-purple: #900c3e;
+  --deep-purple: #571845;
+  --white: #ffffff;
+  --light-bg: #f9f9f9;
+}
+
+/* --- Estilos principales del login renovado --- */
+
+.body_login {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 2rem;
+  min-height: 80vh;
+  /* Fondo con gradiente vibrante amarillo → naranja → morado */
+  background: linear-gradient(135deg, var(--primary-yellow) 0%, var(--primary-orange) 50%, var(--dark-purple) 100%);
+  margin: 2.5rem 1rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto de ondas o formas abstractas en el fondo (opcional) */
+.body_login::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  right: -10%;
+  width: 150%;
+  height: 150%;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 20%),
+              radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 20%);
+  z-index: -1;
+}
+
+.container_left {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  /* Fondo semitransparente para texto */
+  background: #c70039(154, 103, 48, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+/* Título dividido a la mitad: izquierda blanco/gris, derecha morado */
+.text-gradient {
+  font-weight: bold;
+  font-family: 'Lilita One', sans-serif;
+  font-size: 6rem;
+  text-align: center;
+  background: linear-gradient(to right, #f9f9f9 50%, var(--dark-purple) 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+  line-height: 1.1;
+}
+
+.container_right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+/* ✨ TODO dentro del login_box usa Lilita One */
+.login_box,
+.login_box * {
+  font-family: 'Lilita One', sans-serif !important;
+}
+
+.login_box {
+  width: 90%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.2rem;
+  padding: 2.5rem 2rem;
+  /* Gradiente amarillo → naranja en el fondo del contenedor */
+  background: linear-gradient(135deg, var(--primary-yellow), var(--primary-orange));
+  border-radius: 16px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease;
+}
+
+.login_box:hover {
+  transform: translateY(-5px);
+}
+
+.login_box h2 {
+  color: var(--white);
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.login_box p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  transition: border-color 0.3s, box-shadow 0.3s;
+  outline: none;
+}
+
+.input-field:focus {
+  border-color: var(--primary-orange);
+  box-shadow: 0 0 0 3px rgba(255, 87, 51, 0.2);
+}
+
+.rememberme {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.rememberme label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.rememberme input[type="checkbox"] {
+  accent-color: var(--primary-orange);
+}
+
+.forgot-password {
+  color: var(--white);
+  text-decoration: underline;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.forgot-password:hover {
+  color: var(--accent-red);
+}
+
+.btn-login {
+  width: 100%;
+  padding: 12px;
+  /* Gradiente amarillo → naranja en el botón */
+  background: linear-gradient(to right, var(--primary-yellow), var(--primary-orange));
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255, 87, 51, 0.3);
+}
+
+.btn-login:hover {
+  background: linear-gradient(to right, var(--primary-orange), var(--accent-red));
+  transform: scale(1.02);
+  box-shadow: 0 6px 15px rgba(255, 87, 51, 0.4);
+}
+
+/* --- Responsive: hasta 768px --- */
+
+@media (max-width: 768px) {
+  .body_login {
+    flex-direction: column;
+    padding: 1rem;
+    background: linear-gradient(135deg, var(--primary-yellow) 0%, var(--primary-orange) 50%, var(--dark-purple) 100%);
+  }
+
+  .container_left,
+  .container_right {
+    width: 100%;
+    padding: 1.5rem 1rem;
+  }
+
+  .text-gradient {
+    font-size: 3rem;
+    background: linear-gradient(to right, #333 50%, var(--primary-orange) 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .login_box {
+    padding: 2rem 1.5rem;
+    max-width: 100%;
+    background: linear-gradient(135deg, var(--primary-yellow), var(--primary-orange));
+  }
+
+  .btn-login {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}

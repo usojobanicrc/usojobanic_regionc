@@ -1,0 +1,161 @@
+/* Contenedor general */
+.ae-page {
+  padding:  20px;
+  min-height: 100vh;
+  font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: #2b2b2b;
+}
+
+/* Card Principal (contenedor del formulario) */
+.ae-container {
+  position: relative;
+  max-width: 980px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+/* Marca de agua dentro del contenedor */
+.ae-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(/public/logo\ de\ convencion\ bautista.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%; /* ajusta el tamaño de la marca de agua */
+  opacity: 0.2; /* controla la transparencia */
+  z-index: 0;
+  pointer-events: none; /* no bloquea clics */
+}
+
+/* Asegura que el contenido esté encima de la marca de agua */
+.ae-container > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Título */
+.ae-title {
+  text-align: center;
+}
+
+/* Formulario */
+.ae-form {
+  display: grid;
+  gap: 18px;
+}
+
+.section_planificacion,
+.section_conclusion,
+.section_cancelacion {
+  margin-top: 25px;     /* espacio hacia arriba */
+  margin-bottom: 25px;  /* espacio hacia abajo */
+}
+
+/* Sección */
+.ae-section {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 3px solid rgba(212,135,55,0.12);
+  padding: 12px;
+}
+
+/* Header de sección con franja anaranjada */
+.ae-section-header {
+  display: block;
+  margin: 0 auto 10px auto; /* lo centra horizontalmente */
+  text-align: center;       /* centra el texto dentro */
+  background: linear-gradient(90deg, #d48737 0%, #e3a369 100%);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.ae-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.ae-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ae-field label {
+  font-weight: 600;
+  color: #5a3a20;
+  font-size: 0.9rem;
+}
+
+.ae-field input,
+.ae-field select,
+.ae-field textarea {
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background: #fff;
+  outline: none;
+  transition: box-shadow 0.15s, border-color 0.15s;
+}
+
+.ae-field select:focus {
+  border-color: #d48737;
+}
+
+.btn-log {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;  /* separa icono y texto */
+}
+
+.ae-form-buttons {
+ text-align: center;
+  margin-top: 20px;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #d48737 0%, #e29a57 100%);
+  color: white;
+  border: none;
+  padding: 20px 80px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-left: auto;
+  transition: 0.2s ease;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid #d8b48a;
+  color: #5a3a20;
+  padding: 8px 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+/* Responsive */
+@media (max-width: 820px) {
+  .ae-container {
+    padding: 14px;
+  }
+
+  .ae-row {
+    grid-template-columns: 1fr;
+  }
+
+  .ae-form-buttons {
+    justify-content: stretch;
+    flex-direction: column;
+  }
+}
+

@@ -1,0 +1,75 @@
+.eventos-dashboard-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  background: linear-gradient(135deg, #ffc300, #ff5733, #c70039, #900c3e, #571845);
+  
+}
+
+/* Título */
+.eventos-titulo-dashboard {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #900c3e;
+  margin-bottom: 1.5rem;
+}
+
+/* Métricas */
+.eventos-metricas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.eventos-metric-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 0.8rem 1rem;
+  border: 1px solid rgba(255, 195, 0, 0.45);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+.eventos-metric-title {
+  font-size: 0.8rem;
+  color: #555;
+  margin-bottom: 0.2rem;
+}
+
+.eventos-metric-value {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #900c3e;
+}
+
+.eventos-metric-value-small {
+  font-size: 1.3rem;
+}
+
+/* Grid de gráficos */
+.eventos-graficos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Tarjeta de gráfico */
+.eventos-chart-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1rem;
+  border: 1px solid rgba(255, 195, 0, 0.45);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+  height: 320px;
+}
+
+.eventos-chart-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #900c3e;
+  margin-bottom: 0.5rem;
+}
+
+.eventos-chart-content {
+  height: 240px;
+}

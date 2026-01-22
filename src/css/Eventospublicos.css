@@ -1,0 +1,123 @@
+/* 🌈 FONDO GENERAL CON TU GRADIENTE */
+.eventos-publicos-fondo {
+    display: flex;
+    width: 99vw;
+    margin: auto;
+    padding: 30px 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ffc300, #ff5733, #c70039, #900c3e, #571845);
+    background-size: 400% 400%;
+    animation: gradientMove 10s ease infinite;
+}
+
+.eventos-publicos-container {
+
+    margin: auto;
+    padding: 30px 0;
+    min-height: 100vh;
+}
+
+/* animación de fondo */
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* 🌟 TITULO */
+.public-title {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* GRID DE TARJETAS */
+.cards-grid {
+    display: grid;
+    width: 90vw;
+    justify-self: center;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+/* TARJETAS */
+.evento-card {
+    background: white;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.18);
+    border-left: 6px solid transparent;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border 0.25s ease;
+}
+
+/* EFECTO HOVER */
+.evento-card:hover {
+    transform: translateY(-6px);
+    border-left: 6px solid #ff5733;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* TÍTULO DE CADA TARJETA */
+.evento-card-body h2 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #ffc300, #ff5733, #c70039);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* SUBTEXTOS */
+.lugar,
+.fecha {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #444;
+}
+
+/* ESTADOS DE EVENTO */
+.estado {
+    margin-top: 12px;
+    font-weight: bold;
+    padding: 6px 10px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+/* Colores por estado */
+.estado.planificacion {
+    background: #ffc30033;
+    color: #7f6000;
+}
+
+.estado.conclusion {
+    background: #4caf5033;
+    color: #1b5e20;
+}
+
+.estado.cancelado {
+    background: #c7003933;
+    color: #7a0022;
+}
+
+/* MENSAJES */
+.loading,
+.no-events {
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    margin-top: 40px;
+}

@@ -1,0 +1,74 @@
+/* src/css/Dashboard.css */
+
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Altura de la imagen principal */
+    background-image: url('/public/portadarc.jpg'); /* ¡IMPORTANTE! Coloca tu imagen de fondo aquí */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px; /* Espacio entre la imagen y las tarjetas */
+    transform: translateY(-70px); /* 👈 ¡SUBE LA IMAGEN 40PX! */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    font-style: italic;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.dashboard-cards-section {
+    padding: 0 20px;
+    margin-top: -50px; /* Superpone las tarjetas */
+    position: relative;
+    z-index: 10; /* Por encima de la imagen */
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Columnas responsivas */
+    gap: 25px; /* Espacio entre tarjetas */
+    max-width: 1200px; /* Ancho máximo */
+    margin: 0 auto; /* Centra el grid */
+}
+
+/* src/css/Dashboard.css o src/App.css */
+
+.dashboard-content {
+  transition: margin-left 0.2s ease-in-out;
+  margin-left: 0;
+  padding: 20px;
+  padding-top: 80px; /* altura del header Cabecera */
+  min-height: calc(100vh - 80px);
+  box-sizing: border-box;
+}
+
+.dashboard-content.sidebar-open {
+  margin-left: 280px; /* ancho del sidebar */
+}

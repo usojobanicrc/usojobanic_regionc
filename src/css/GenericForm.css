@@ -1,0 +1,107 @@
+/* FORMULARIO BASE */
+.generic-form {
+    display: flex;
+    flex-direction: column;
+    background: white; 
+    gap: 16px;
+     padding: 20px;            /* 🔥 NECESARIO */
+    border-radius: 10px;      /* bonito */
+    width: 100%;          
+}
+
+/* GRUPO DE CAMPOS */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* LABELS */
+.form-label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #333;
+}
+
+/* INPUTS Y SELECTS */
+.form-input {
+    padding: 10px 12px;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+.form-input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.3);
+}
+
+.form-input:hover {
+    border-color: #b5b5b5;
+}
+
+/* SELECT */
+select.form-input {
+    background-color: white;
+    cursor: pointer;
+}
+
+/* CHECKBOX */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/* BOTONES */
+.btn-base {
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: 0.2s ease;
+}
+
+/* PRIMARIO */
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0069d9;
+}
+
+/* SECUNDARIO */
+.btn-secondary {
+    background-color: #e4e4e4;
+    color: #333;
+}
+
+.btn-secondary:hover {
+    background-color: #d0d0d0;
+}
+
+.form-actions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.form-actions .btn-primary {
+    display: inline-block;   /* necesario para que text-align funcione bien */
+    padding: 12px 40px;
+    font-size: 1.05rem;
+    border-radius: 10px;
+    font-weight: 700;
+    margin: 0;
+}

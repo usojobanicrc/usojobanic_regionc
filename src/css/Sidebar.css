@@ -1,0 +1,158 @@
+/* src/css/Sidebar.css */
+
+/***  INICIO ***/
+.no-submenu .direct-link {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 15px 20px;
+  color: #571845; /* 👈 Texto: púrpura profundo */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.no-submenu .direct-link .sidebar-menu-icon {
+  color: #ff5733; /* 👈 Iconos: naranja principal */
+}
+
+.sidebar-divider {
+  width: 100%;
+  display: block;
+  border: none;
+  margin: 0;
+}
+/***  FIN  ***/
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -280px;
+  width: 280px;
+  height: 100vh;
+  background-color: #fff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  transition: left 0.3s ease;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 15px 20px;
+  height: 60px;
+}
+
+.sidebar-close-btn {
+  background: none;
+  border: none;
+  color: #ff5733; /* 👈 Botón de cierre: naranja principal */
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.sidebar-menu-item {
+  border-bottom: 1px solid #ff9500; /* 👈 Borde: morado oscuro */
+}
+
+.sidebar-menu-link {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  color: #571845; /* 👈 Texto: púrpura profundo */
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.sidebar-menu-link:hover {
+  background-color: #fcfcb7; /* 👈 Hover: morado oscuro */
+  color: #571845; /* 👈 Texto blanco en hover */
+}
+
+.sidebar-menu-icon {
+  margin-right: 15px;
+  color: #ff5733; /* 👈 Iconos: naranja principal */
+  font-size: 1.2rem;
+}
+
+.sidebar-dropdown-arrow {
+  margin-left: auto;
+  transition: transform 0.3s ease;
+  font-size: 0.9rem;
+  color: #f4a051; /* 👈 Flecha: púrpura profundo */
+}
+
+.sidebar-dropdown-arrow.open {
+  transform: rotate(180deg);
+}
+
+.sidebar-submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #ffffff;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.sidebar-submenu.visible {
+  max-height: 500px;
+}
+
+.sidebar-submenu-item-btn {
+  background: none;
+  border: none;
+  color: #571845; /* 👈 Texto: púrpura profundo */
+  width: 100%;
+  text-align: left;
+  padding: 12px 20px 12px 55px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.9rem;
+  display: block;
+}
+
+.sidebar-submenu-item-btn:hover {
+  background-color: #f4a051; /* 👈 Hover: morado oscuro */
+  color: #571845; /* 👈 Texto blanco en hover */
+}
+
+/* Backdrop del sidebar */
+.sidebar-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  cursor: pointer;
+}

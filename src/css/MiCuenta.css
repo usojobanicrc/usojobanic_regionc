@@ -1,0 +1,205 @@
+/* src/css/MiCuenta.css */
+
+.mi-cuenta-page {
+    padding: 2rem;
+    max-width: 900px;
+    margin: 2rem auto;
+    background-color: #ffece0;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #571845; /* Texto principal: púrpura profundo */
+}
+
+.page-header-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #900c3e; /* Morado oscuro → más elegante que naranja */
+}
+
+.page-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #571845; /* Púrpura profundo */
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.back-btn {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ff5733; /* Naranja principal */
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ff5733;
+    border-radius: var(--border-radius);
+    transition: all 0.2s ease;
+    background: transparent;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.back-btn:hover {
+    background-color: #ff5733;
+    color: white;
+    transform: translateY(-50%) scale(1.05);
+}
+
+.account-section {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e5e7eb; /* Gris suave → más sutil */
+    transition: border-color 0.2s;
+}
+
+.account-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.section-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #ff5733; /* Naranja principal */
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 0.75rem;
+    transition: color 0.2s, transform 0.2s;
+    padding: 0.75rem 1rem;
+    border-radius: var(--border-radius);
+    background: linear-gradient(to right, #fff, #fdfdfd);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.section-title:hover {
+    color: #ff5733;
+    opacity: 0.9;
+    transform: translateX(5px);
+    background: linear-gradient(to right, #fff, #ffc300); /* Amarillo brillante en hover */
+}
+
+.section-icon {
+    margin-left: 0.5rem;
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+    color: #571845;
+}
+
+.section-icon.open {
+    transform: rotate(180deg);
+}
+
+.section-content {
+    padding-left: 2rem;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    background: #fdfdfd; /* Fondo muy claro */
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    margin-top: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+}
+
+.section-content.visible {
+    max-height: 500px;
+    opacity: 1;
+}
+
+.data-field {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: var(--border-radius);
+    margin-bottom: 0.5rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.data-field:hover {
+    border-color: #ff5733;
+    box-shadow: 0 2px 6px rgba(255, 87, 51, 0.1);
+}
+
+.field-label {
+    font-weight: 600;
+    color: #571845;
+    min-width: 150px;
+}
+
+.field-value {
+    color: #6b7280; /* Gray-500 → más suave */
+    word-break: break-all;
+    max-width: 300px;
+    overflow-wrap: break-word;
+}
+
+/* Estilo uniforme para enlaces */
+.config-link,
+.activity-link,
+.roles-link,
+.help-link {
+    margin-bottom: 1rem;
+    padding: 0.75rem 1rem;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: var(--border-radius);
+    transition: all 0.2s ease;
+}
+
+.config-link a,
+.roles-link a,
+.help-link a,
+.activity-link a {
+    color: #ff5733;
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    padding: 0.5rem 0;
+    transition: color 0.2s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.config-link a:hover,
+.roles-link a:hover,
+.help-link a:hover,
+.activity-link a:hover {
+    color: #ffc300; /* Amarillo brillante en hover */
+    transform: translateX(5px);
+}
+
+/* Botón de acción dentro de sección (opcional) */
+.section-action-btn {
+    background-color: #ff5733;
+    color: #ffece0;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+.section-action-btn:hover {
+    background-color: #c70039; /* Rojo oscuro */
+    transform: translateY(-2px);
+}

@@ -1,0 +1,67 @@
+/* src/css/DashboardCard.css */
+.dashboard-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    min-height: 200px;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.card-icon {
+    font-size: 1.8rem;
+    color: #f29a2e;
+    margin-right: 15px;
+    padding: 8px;
+    background-color: rgba(242, 154, 46, 0.1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.card-value {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0 0 5px 0;
+}
+
+.card-description {
+    font-size: 0.85rem;
+    color: #888;
+    margin: 0 0 15px 0;
+}
+
+.card-chart-container {
+    height: 80px;
+    width: 100%;
+    margin-top: auto; /* Empuja hacia abajo */
+}
