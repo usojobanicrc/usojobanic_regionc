@@ -45,7 +45,7 @@ const FormEvento = ({
     const [iglesias, setIglesias] = useState([]);
 
     // -----------------------------------------------------------
-    // 🔥 MAPEAR initialData → form (cuando editas)
+    // MAPEAR initialData → form (cuando editas)
     // -----------------------------------------------------------
     useEffect(() => {
         if (!initialData) return;
@@ -218,7 +218,7 @@ const FormEvento = ({
     };
 
     // -----------------------------------------------------------
-    // 🔥 RENDER — estilo AddEvento completo
+    // RENDER — estilo AddEvento completo
     // -----------------------------------------------------------
     return (
         <div className="ae-page">

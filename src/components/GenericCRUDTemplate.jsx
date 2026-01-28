@@ -19,7 +19,7 @@ import { FaFilePdf, FaFileExcel } from "react-icons/fa6";
 
 
 // =====================================================
-// 📄 Generar PDF general
+// Generar PDF general
 // =====================================================
 const generatePDFReport = async (data, filters) => {
     const doc = new jsPDF({ orientation: "portrait", unit: "pt", format: "letter" });
@@ -62,7 +62,7 @@ const generatePDFReport = async (data, filters) => {
 
 
 // =====================================================
-// 📊 Generar Excel general
+// Generar Excel general
 // =====================================================
 const generateExcelReport = (data) => {
     const excelData = data.map(ev => ({
@@ -87,7 +87,7 @@ const generateExcelReport = (data) => {
 };
 
 
-// 🔥 CORRECCIÓN 1: Establecer config = {} como valor por defecto
+// Establecer config = {} como valor por defecto
 function GenericCRUDTable({ config = {}, onCreate }) {
 
     // 1. DESESTRUCTURACIÓN Y EXTRACCIÓN DE RELATIONS
@@ -152,7 +152,7 @@ function GenericCRUDTable({ config = {}, onCreate }) {
         setEditingRecord(null);
     };
 
-    // 🔥 NUEVA FUNCIÓN: Llamada al finalizar el CRUD en el formulario especializado (AddEvento)
+    //Llamada al finalizar el CRUD en el formulario especializado (AddEvento)
     const handleFormSubmitSuccess = () => {
 
 
@@ -169,7 +169,7 @@ function GenericCRUDTable({ config = {}, onCreate }) {
 
     const handleCreateClick = () => {
 
-        console.log("✅ CRUD Table: Botón Crear clickeado.");
+        console.log("CRUD Table: Botón Crear clickeado.");
         if (onCreate) {
             onCreate();
             return;
@@ -206,7 +206,7 @@ function GenericCRUDTable({ config = {}, onCreate }) {
         const recordCompleto = await getRecordById(record.id);
 
         if (!recordCompleto) {
-            console.error("❌ No se pudo cargar el registro con relaciones.");
+            console.error("No se pudo cargar el registro con relaciones.");
             return;
         }
 
@@ -224,7 +224,7 @@ function GenericCRUDTable({ config = {}, onCreate }) {
             rol_id: recordCompleto.usuarios_roles?.[0]?.rol_id ?? ""
         };
 
-        console.log("➡️ CRUD Table: Record Procesado para Edición:", processedRecord);
+        console.log("CRUD Table: Record Procesado para Edición:", processedRecord);
 
         setEditingRecord(processedRecord);
         setIsModalOpen(true);
@@ -247,7 +247,7 @@ function GenericCRUDTable({ config = {}, onCreate }) {
         }
 
         if (success) {
-            // ✅ Usar la función de cierre que acabamos de definir
+            // Usar la función de cierre que acabamos de definir
             handleCloseModal();
         } else {
             console.error("Fallo la operación CRUD. Revisa el error en la consola.");
@@ -255,19 +255,19 @@ function GenericCRUDTable({ config = {}, onCreate }) {
     };
 
     // =====================================================
-    // 📄 Generar PDF individual
+    // Generar PDF individual
     // =====================================================
 
     const generateEventPDF_HTML = (ev) => {
 
-        // 1️⃣ Crear contenedor invisible donde se va a renderizar el acta
+        // 1️. Crear contenedor invisible donde se va a renderizar el acta
         const element = document.createElement("div");
         element.style.width = "800px";
         element.style.padding = "40px";
         element.style.fontFamily = "Helvetica";
         element.style.position = "relative";
 
-        // 2️⃣ Plantilla del acta en HTML
+        // 2️. Plantilla del acta en HTML
         element.innerHTML = `
         <div style="position: relative;">
 
@@ -332,7 +332,7 @@ function GenericCRUDTable({ config = {}, onCreate }) {
         </div>
     `;
 
-        // 3️⃣ Convertir a PDF
+        // 3️. Convertir a PDF
         html2pdf()
             .from(element)
             .set({
@@ -357,7 +357,7 @@ function GenericCRUDTable({ config = {}, onCreate }) {
 
     // --- RENDERIZADO DE ESTADOS ---
 
-    // 🔥 CORRECCIÓN 2: Mostrar un error si la configuración principal está faltando
+    //Mostrar un error si la configuración principal está faltando
     if (!tableName) {
         return <div className="error-message">Error de Configuración: La propiedad 'tableName' está faltando. Asegúrate de pasar el prop 'config' correctamente.</div>;
     }
@@ -449,7 +449,7 @@ function GenericCRUDTable({ config = {}, onCreate }) {
                         <tr>
                             {/* Asegurarse que columnConfig tenga elementos */}
                             {columnConfig
-                                // 🔥 APLICAR FILTRO PARA NO MOSTRAR SI hideInTable ES TRUE
+                                // APLICAR FILTRO PARA NO MOSTRAR SI hideInTable ES TRUE
                                 ?.filter(col => !col.hideInTable).map(col => (
                                     <th key={col.key}>{col.label}</th>
                                 ))}
@@ -462,7 +462,7 @@ function GenericCRUDTable({ config = {}, onCreate }) {
                         {data?.map(record => (
                             <tr key={record.id}>
                                 {columnConfig
-                                    // 🔥 APLICAR FILTRO PARA NO MOSTRAR SI hideInTable ES TRUE
+                                    // APLICAR FILTRO PARA NO MOSTRAR SI hideInTable ES TRUE
                                     ?.filter(col => !col.hideInTable).map(col => (
                                         <td key={col.key}>
                                             {col.render ? col.render(record[col.key]) : record[col.key]}

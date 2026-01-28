@@ -1,6 +1,6 @@
 // src/components/AccountProfileCard.jsx
 import React from 'react';
-import { useNavigate } from 'react-router-dom'; // 👈 Importa useNavigate
+import { useNavigate } from 'react-router-dom'; // Importa useNavigate
 import '../css/AccountProfileCard.css';
 import userAvatar from '../img/usojobanicB.png';
 import { supabase } from "../utils/supabaseClient";
@@ -8,7 +8,7 @@ import { logActivity } from "../utils/logActivity";
 
 
 const AccountProfileCard = ({ user }) => {
-  const navigate = useNavigate(); // 👈 Hook para navegar
+  const navigate = useNavigate(); // Hook para navegar
   
  //Salir sesión
   const handleLogout = async () => {

@@ -45,7 +45,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
     };
   }, [isOpen, handleClickOutside]);
 
-    // 👇 AÑADE ESTE BLOQUE 👇
+
   useEffect(() => {
     if (isOpen) {
       document.body.classList.add('sidebar-open');
@@ -53,7 +53,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
       document.body.classList.remove('sidebar-open');
     }
   }, [isOpen]);
-  // 👆 FIN DEL BLOQUE AÑADIDO 👆
+
 
   const navigate = useNavigate();
   const routes = {

@@ -1,10 +1,8 @@
-// 🔥 VERSIÓN ANTIGUA DEL useCRUD + SISTEMA DE BITÁCORA DEL NUEVO
-// ---------------------------------------------------------------
 import { useState, useEffect, useCallback } from 'react';
 import { supabase } from '../utils/supabaseClient';
 
 // ---------------------------------------------------------
-// 🔥 LOG DE BITÁCORA
+// LOG DE BITÁCORA
 // ---------------------------------------------------------
 const logActivity = async (actividad, tabla, lineaId) => {
     try {
@@ -32,7 +30,7 @@ const logActivity = async (actividad, tabla, lineaId) => {
 };
 
 // ---------------------------------------------------------
-// ⭐ FUNCIÓN NUEVA PARA MANEJAR LA TABLA usuarios_roles
+// FUNCIÓN NUEVA PARA MANEJAR LA TABLA usuarios_roles
 // ---------------------------------------------------------
 const saveUserRole = async (usuarioId, rolId) => {
     try {
@@ -57,8 +55,8 @@ const saveUserRole = async (usuarioId, rolId) => {
 };
 
 // ---------------------------------------------------------
-// 🔥 VERSIÓN ORIGINAL COMPLETA DEL useCRUD + ajustes para roles
-// ---------------------------------------------------------
+// useCRUD + ajustes para roles
+// --------------------------------------------------------
 export const useCRUD = (tableName, relations = []) => {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -69,10 +67,10 @@ export const useCRUD = (tableName, relations = []) => {
         for (const key in record) {
             let value = record[key];
 
-            // ⭐ Evitar enviar rol_id a la tabla usuarios
+            // Evitar enviar rol_id a la tabla usuarios
             if (key === "rol_id") continue;
 
-            // ⭐ Evitar enviar la relación usuarios_roles (N:M)
+            // Evitar enviar la relación usuarios_roles (N:M)
             if (key === "usuarios_roles") continue;
 
             if (key === 'iglesias_estimadas' || key === 'iglesias_reales') continue;
@@ -215,7 +213,7 @@ export const useCRUD = (tableName, relations = []) => {
 
         const newId = insertedData.id;
 
-        // ⭐ guardar rol del usuario
+        // guardar rol del usuario
         await saveUserRole(newId, newRecord.rol_id);
 
         await logActivity("CREACIÓN DE REGISTRO", tableName, newId);
@@ -240,7 +238,7 @@ export const useCRUD = (tableName, relations = []) => {
             return false;
         }
 
-        // ⭐ actualizar el rol del usuario
+        // actualizar el rol del usuario
         await saveUserRole(recordId, updatedFields.rol_id);
 
         await logActivity("EDICIÓN DE REGISTRO", tableName, recordId);
