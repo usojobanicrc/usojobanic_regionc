@@ -50,15 +50,14 @@ export default function Header() {
               </button>
               {showSubMenu && (
                 <ul className="header-submenu">
-                  <li><a href="/mision">Misión</a></li>
-                  <li><a href="/vision">Visión</a></li>
-                  <li><a href="/principios">Principios</a></li>
-                  <li><a href="/circuitos">Circuitos</a></li>
+                  <li><a href="/conocenos#mision">Misión</a></li>
+                  <li><a href="/conocenos#vision">Visión</a></li>
+                  <li><a href="/conocenos#principios">Principios</a></li>
+                  <li><a href="/conocenos#circuitos">Circuitos</a></li>
                 </ul>
               )}
             </li>
             <li><a href="/eventos-publicos">EVENTOS</a></li>
-            <li><a href="/">CONTACTANOS</a></li>
             <li><Button name="Ingresa" onClick={handleLoginClick} /></li>
           </ul>
         </nav>

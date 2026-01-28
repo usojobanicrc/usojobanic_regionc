@@ -1,4 +1,3 @@
-
 import React from 'react';
 import logo from '../img/usojobanicB.png';
 import "../css/Footer.css";
@@ -23,10 +22,10 @@ export const Footer = () => {
         {/* Sección Enlaces */}
         <div className="box__footer">
           <h2>Conócenos</h2>
-          <a href="#!">Quienes Somos</a>
-          <a href="#!">Nuestro Misión</a>
-          <a href="#!">Nuestros principios</a>
-          <a href="#!">Junta Directiva</a>
+          <a href="/conocenos#mision">Nuestra Misión</a>
+          <a href="/conocenos#vision">Nuestro Visión</a>
+          <a href="/conocenos#principios">Nuestros principios</a>
+          <a href="/conocenos#juntas">Junta Directiva</a>
         </div>
 
         {/* Sección Redes Sociales */}

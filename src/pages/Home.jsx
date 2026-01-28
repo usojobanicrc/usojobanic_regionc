@@ -17,10 +17,9 @@ const Home = () => {
     navigate("/iglesias-publicas");
   };
 
-  const handeleventosClick = () => {
+    const handeleventosClick = () => {
     navigate("/eventos-publicos")
   }
-
 
   return (
     <>
@@ -28,8 +27,6 @@ const Home = () => {
       <div className="containerhometodo">
         <div className="containercosasheader">
           <Fondo />
-
-          <Button name="Proximos Eventos" onClick={handeleventosClick} className="boton-superpuestofondo" />
         </div>
 
         <div className="containerversiculos">

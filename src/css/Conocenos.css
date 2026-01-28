@@ -1,0 +1,424 @@
+/* === SECCIÓN MISIÓN – Versión Profesional sin Gradient === */
+
+.containermision {
+  background-color: #ff5733; /* Un tono ligeramente más suave y profesional que #D48737 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 544px;
+  gap: 36px;
+  padding: 0 3rem;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Textura sutil de fondo (opcional, muy leve) */
+.containermision::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+
+.contenedortextomision {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 550px;
+  max-width: 100%;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  z-index: 2;
+}
+
+.titulomision {
+  color: white;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-size: 2.25rem; /* 36px */
+  font-weight: 700;
+  margin: 0 0 1.2rem 0;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.parrafomision {
+  color: rgba(255, 255, 255, 0.92);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-size: 1.125rem; /* 18px equivalente más legible que 26px en contexto */
+  line-height: 1.6;
+  margin: 0;
+  text-align: center;
+  font-weight: 400;
+}
+
+.contenedorimagenmision {
+  width: 702px;
+  height: 395px;
+  background-image: url('/public/Mision.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.4s ease;
+}
+
+.contenedorimagenmision::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.3), transparent 60%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Efecto sutil al hover (opcional) */
+.contenedorimagenmision:hover {
+  transform: scale(1.01);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .containermision {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem 1.5rem;
+    gap: 30px;
+  }
+
+  .contenedortextomision {
+    width: 100%;
+  }
+
+  .contenedorimagenmision {
+    width: 100%;
+    max-width: 600px;
+    height: 320px;
+  }
+
+  .titulomision {
+    font-size: 1.875rem; /* 30px */
+  }
+
+  .parrafomision {
+    font-size: 1rem;
+  }
+}
+
+/* === SECCIÓN VISIÓN – Diseño Profesional sin Gradient === */
+
+.containervision {
+  background-color: #ff5733; /* Naranja cálido ligeramente más claro y refinado */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 544px;
+  gap: 40px;
+  padding: 0 3rem;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* Línea sutil decorativa en el fondo (opcional, minimalista) */
+.containervision::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.12);
+  z-index: 0;
+}
+
+.contenedortextovision {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 560px;
+  max-width: 100%;
+  padding: 1.8rem 1.5rem;
+  background: rgba(25, 25, 25, 0.12);
+  border-radius: 16px;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  z-index: 2;
+}
+
+.titulovision {
+  color: white;
+  font-size: 2.4rem; /* ≈38px, más impacto que 32px */
+  font-weight: 800;
+  margin: 0 0 1.1rem 0;
+  line-height: 1.15;
+  letter-spacing: -0.3px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.parrafovision {
+  color: #f9f9f9;
+  font-size: 1.125rem; /* ≈18px, más legible y proporcional */
+  line-height: 1.65;
+  margin: 0;
+  font-weight: 400;
+  opacity: 0.94;
+  max-width: 500px;
+}
+
+.contenedorimagenvision {
+  width: 702px;
+  height: 395px;
+  background-image: url('/public/Visionig.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 14px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.4s ease;
+}
+
+.contenedorimagenvision:hover {
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.25);
+}
+
+.contenedorimagenvision::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.3), transparent 60%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Efecto sutil al hover (opcional) */
+.contenedorimagenvision:hover {
+  transform: scale(1.01);
+}
+
+/* Responsive para móviles y tablets */
+@media (max-width: 920px) {
+  .containervision {
+    flex-direction: column;
+    height: auto;
+    padding: 2.5rem 1.5rem;
+    gap: 32px;
+  }
+
+  .contenedortextovision {
+    width: 100%;
+  }
+
+  .contenedorimagenvision {
+    width: 100%;
+    max-width: 620px;
+    height: 330px;
+  }
+
+  .titulovision {
+    font-size: 2rem;
+  }
+
+  .parrafovision {
+    font-size: 1rem;
+  }
+}
+
+/*Container conocenos*/
+.conocenos-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 3rem 1.5rem;
+}
+
+.section {
+  margin-bottom: 4rem;
+}
+
+.section-alt {
+  background: #f7f7f7;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+}
+
+.section h1 {
+  margin-bottom: 1rem;
+  color: #b30000;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.tab {
+  background: #f0f0f0;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab.active {
+  background: #d48737;
+  color: white;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  
+}
+
+/* Junta */
+.miembros-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  padding: 3rem 1rem 1rem 1rem;
+  background-color: white;
+}
+
+.card {
+  background: #d48737;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-15px);
+}
+
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.info {
+  padding: 1rem;
+  background: #d48737;
+  color: white;
+}
+
+.cargo {
+  color: blanchedalmond;
+  font-weight: 600;
+}
+
+/* Circuitos */
+.circuitos-container {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(to bottom, #faf4e8, #ffffff);
+  color: #0b1f38;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.circuitos-container h1 {
+  background-color: #D48737;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.circuitos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.circuito-card {
+  background-color: #F5B55C;
+  border-radius: 10px;
+  padding: 20px;
+  width: 90%;
+  max-width: 350px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.circuito-card h2 {
+  background-color: #D48737;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.circuito-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  line-height: 1.5;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.circuito-card li::before {
+  content: "• ";
+  color: #ffffff;
+}
+
+.icono {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  font-size: 1.8rem;
+  opacity: 1.5;
+}
+
+/* Acordeón */
+.acordeon-item {
+  border-bottom: 1px solid #ddd;
+}
+
+.acordeon-titulo {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 1rem 0;
+  color: #d48737;
+}
+
+.acordeon-contenido {
+  padding-bottom: 1.5rem;
+}

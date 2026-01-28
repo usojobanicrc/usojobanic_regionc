@@ -4,17 +4,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavigationLoader from "./components/NavigationLoader";
 import ProtectedRoute from "./components/ProtectedRoute";
 //prueba 
+import Conocenos from './pages/Conocenos';
 // páginas…
 
 import Home from './pages/Home';
 import Dashboard from './pages/Dashboard';
 import { Login } from './pages/Login';
 import MiCuenta from './pages/MiCuenta';
-import Principios from './pages/Principios';
-import Mision from './pages/Mision';
-import Vision from './pages/Vision';
-import Circuitos from './pages/Circuitos';
-import JuntaDirectiva from './pages/JuntaDirectiva';
 import IglesiasCRUD from './pages/IglesiasCRUD';
 import EventosCRUD from './pages/eventosCRUD';
 import InventarioCRUD from './pages/InventarioCURD';
@@ -36,13 +32,14 @@ function App() {
           {/* Páginas públicas */}
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/principios" element={<Principios />} />
-          <Route path="/mision" element={<Mision />} />
-          <Route path="/vision" element={<Vision />} />
-          <Route path="/circuitos" element={<Circuitos />} />
-          <Route path="/juntadirectiva" element={<JuntaDirectiva />} />
+          <Route path="/conocenos" element={<Conocenos />} />
+          <Route path="/conocenos#mision" element={<Conocenos />} />
+          <Route path="/conocenos#vision" element={<Conocenos />} />
+          <Route path="/conocenos#juntas" element={<Conocenos />} />
+          <Route path="/conocenos#principios" element={<Conocenos />} />
           <Route path="/iglesias-publicas" element={<IglesiasPublicas />} />
           <Route path="/eventos-publicos" element={<EventosPublicos />} />
+
 
           {/* Protegidas */}
           <Route
