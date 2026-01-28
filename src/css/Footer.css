@@ -1,89 +1,97 @@
-footer {
+.main-footer {
     width: 100%;
-    padding: 50px 0px;
-    background-size: cover;
-    background-color: black;
-}
+    /* Aumentamos el padding superior para que la onda no cubra el contenido */
+    padding: 120px 20px 40px 20px; 
+    
+    /* Colores basados en tu imagen */
+    background: linear-gradient(135deg, #f37335 0%, #fdc830 100%);
+    
+    /* El truco de la onda con máscara */
+    -webkit-mask-image: url("../img/background-footer.svg");
+    mask-image: url("../img/background-footer.svg");
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
 
-.text-center {
-    color: #7a7a7a;
-    font-size: 24px;
-    height: 59px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .container__footer {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    height: auto;
+    justify-content: center; /* Centra las columnas horizontalmente */
+    align-items: flex-start;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    gap: 40px;
 }
 
 .box__footer {
     display: flex;
     flex-direction: column;
-    align-items: center;;
-    padding: 20px;
+    align-items: center; /* Centra el contenido dentro de cada columna */
+    flex: 1;
+    min-width: 280px;
+    text-align: center;
 }
-
 
 .box__footer .logo img {
-    width: 200px;
-    
+    width: 110px;
+    /* Si el logo tiene color, puedes quitar el filter */
+    filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.1));
+    margin-bottom: 15px;
 }
 
-.box__footer .terms {
-    max-width: 350px;
-    margin-top: 60px;
-    font-weight: 500;
-    color: #7a7a7a;
-    font-size: 18px;
+.box__footer .terms p {
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 300px;
 }
 
 .box__footer h2 {
-    margin-bottom: 30px;
-    color: #343434;
+    margin-bottom: 20px;
+    color: #343434; /* Oscuro para contraste sobre el naranja */
     font-weight: 700;
+    font-size: 1.5rem;
+    margin-top: 30px;
 }
 
 .box__footer a {
     margin-top: 10px;
-    color: #7a7a7a;
-    font-weight: 600;
+    color: #ffffff;
+    font-weight: 500;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.2s ease;
 }
 
 .box__footer a:hover {
-    color: white;
-}
-
-.box__footer a .fab {
-
-    font-size: 20px;
+    transform: scale(1.05);
+    color: #343434;
 }
 
 .box__copyright {
+    width: 100%;
     max-width: 1200px;
-    margin: auto;
+    margin-top: 60px;
     text-align: center;
-    padding: 0px 40px;
-}
-
-.box__copyright p {
-    margin-top: 20px;
-    color: #7a7a7a;
 }
 
 .box__copyright hr {
     border: none;
-    height: 1px;
-    background-color: #7a7a7a;
-}
-.container-social-icons {
-    display: flex;
-   gap: 20px;
+    height: 2px;
+    background-color: white;
+    margin-bottom: 20px;
 }
 
-.social-icon {
-    font-size: 2rem;
-    
+.box__copyright p {
+    color: #ffffff;
+    font-size: 14px;
 }
